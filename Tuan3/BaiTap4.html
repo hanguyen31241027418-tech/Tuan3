@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bài Tập 4 - Horizontal Menu</title>
+  <style>
+    /* Reset lề mặc định của thẻ ul */
+    ul {
+      list-style-type: none; /* Bỏ dấu chấm tròn mặc định của danh sách */
+      padding: 0;
+      margin: 20px 0;
+      background-color: #f1f1f1; /* Màu nền cho thanh menu */
+      border-radius: 4px;
+    }
+
+    /* Gợi ý c: display inline-block giúp các thẻ li nằm cùng một hàng ngang */
+    ul li {
+      display: inline-block;
+      margin-right: -4px; /* Xóa khoảng trắng thừa giữa các thẻ inline-block */
+    }
+
+    /* Định dạng thẻ link bên trong */
+    ul li a {
+      display: block;
+      padding: 12px 24px;
+      color: #333;
+      text-decoration: none; /* Bỏ gạch chân mặc định của link */
+      font-weight: bold;
+      font-family: Arial, sans-serif;
+      transition: background-color 0.3s;
+    }
+
+    /* Hiệu ứng khi rê chuột vào từng item */
+    ul li a:hover {
+      background-color: #0056b3;
+      color: #ffffff;
+      border-radius: 4px;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Bài Tập 4: Menu Hàng Ngang (Inline-Block)</h2>
+
+  <!-- HTML gốc của đề -->
+  <ul>
+    <li><a href="#">TMDT</a></li>
+    <li><a href="#">ERP</a></li>
+    <li><a href="#">MIS</a></li>
+    <li><a href="#">DS</a></li>
+  </ul>
+
+</body>
+</html>

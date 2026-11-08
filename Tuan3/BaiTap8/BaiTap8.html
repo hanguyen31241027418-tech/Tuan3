@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Heroes of JavaScript and HTML - Bài 8a</title>
+    <!-- Link Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Times New Roman', Times, serif;
+            background-color: #f4f4f4;
+            padding: 30px 0;
+        }
+
+        /* i. Khung chứa lớn: kích thước: 960px; margin; font-size; background; padding */
+        #root {
+            width: 960px;
+            margin: 0 auto;
+            font-size: 15px;
+            background-color: #cccccc;
+            padding: 30px;
+            border: 3px solid #ffffff;
+            border-radius: 6px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.15);
+        }
+
+        /* ii. Header: font-size; canh lề */
+        .header {
+            font-size: 28px;
+            text-align: center;
+            margin-bottom: 25px;
+            color: #000;
+            font-weight: bold;
+        }
+
+        /* iii. Description (ngoài): margin; background; padding; border */
+        p.description {
+            margin: 0 auto 25px;
+            background-color: #777777;
+            color: #ffffff;
+            padding: 15px 25px;
+            border: 2px solid #ffffff;
+            border-radius: 12px;
+            line-height: 1.4;
+            text-align: center;
+            width: 90%;
+        }
+
+        .container .remark {
+            text-align: center;
+            margin-bottom: 25px;
+            color: #111;
+            font-size: 15px;
+        }
+
+        .heroes-list {
+            list-style: none;
+            display: flex;
+            justify-content: space-between;
+            padding: 0;
+        }
+
+        /* iv. Hero-item: width; display */
+        .hero-item {
+            width: 210px;
+            display: inline-block;
+            vertical-align: top;
+            text-align: center;
+            position: relative;
+        }
+
+        /* v. H2 trong Hero-item: font-size; canh lề */
+        .hero-item h2 {
+            font-size: 16px;
+            text-align: center;
+            margin-bottom: 15px;
+            font-weight: bold;
+            color: #000;
+        }
+
+        /* vi. Description trong Hero-item: position; margin; font-size; background; height; canh lề; padding; border; z-index */
+        .hero-item p.description {
+            position: relative;
+            z-index: 2;
+            margin: 0 auto -60px; /* Đè đè 60px xuống hình ảnh */
+            font-size: 13px;
+            background-color: rgba(120, 120, 120, 0.75); /* Nền mờ đè lên hình */
+            height: 210px;
+            text-align: left;
+            padding: 12px;
+            border: 2px solid #ffffff;
+            border-radius: 8px;
+            overflow: hidden;
+            color: #000;
+            width: 100%;
+            line-height: 1.35;
+        }
+
+        /* vii. Hình trong Hero-item: position; cao; rộng; border */
+        .hero-item img {
+            position: relative;
+            z-index: 1;
+            width: 210px;
+            height: 180px;
+            border-radius: 20px; /* Bo góc hình chữ nhật theo đúng mẫu */
+            border: 1px solid #ddd;
+            object-fit: cover;
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="root">
+        <h1 class="header">
+            Heroes of JavaScript and HTML
+        </h1>
+
+        <p class="description">
+            <strong>Heroes of JavaScript and HTML</strong> is a "Heroes of Might and Magic"-like game, but for code nerds.<br>
+            Each hero has its unique coding abilities and based on them he can develop software applications.
+        </p>
+
+        <div class="container">
+            <p class="remark">Currently the game has only four hero types:</p>
+            <ul class="heroes-list">
+                <li class="hero-item">
+                    <h2>Front-end Developer</h2>
+                    <p class="description">
+                        Being the ultra masters of JavaScript, the order of the <strong>Front-enders</strong> is known to create user interfaces, that fill the users with absolute pleasure
+                    </p>
+                    <img src="./imgs/fe (1).png" alt="Front-end">
+                </li>
+                <li class="hero-item">
+                    <h2>Mobile Developer</h2>
+                    <p class="description">
+                        The movement of the <strong>Mobile developers</strong> is brand new, yet in their short time they already manage to amaze the peoples of the worlds and beyond with create applications.
+                    </p>
+                    <img src="./imgs/mobile (1).jpg" alt="Mobile">
+                </li>
+                <li class="hero-item">
+                    <h2>Web Developer</h2>
+                    <p class="description">
+                        The sect of the <strong>Web developers</strong> is the oldest there is. They prefer the old ways and rarely move to modern stuff. The Old Religion gives them power of small gods.
+                    </p>
+                    <img src="./imgs/web (1).jpg" alt="Web">
+                </li>
+                <li class="hero-item">
+                    <h2>QA Engineer</h2>
+                    <p class="description">
+                        The <strong>QAs</strong> are the desiders of fates! They always have the final word, and all gods and mortals are bound to obey them.
+                    </p>
+                    <img src="./imgs/qa (1).jpg" alt="QA">
+                </li>
+            </ul>
+        </div>
+    </div>
+</body>
+
+</html>

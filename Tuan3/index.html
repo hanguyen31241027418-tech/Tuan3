@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nguyễn Thanh Hà - Danh Sách Bài Tập Tuần 3 (CSS Basic)</title>
+    <!-- Nhúng Font Awesome 5 theo hướng dẫn -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f6f9;
+            color: #333;
+            padding: 30px 15px;
+        }
+
+        .container {
+            max-width: 850px;
+            margin: 0 auto;
+            background: #ffffff;
+            padding: 35px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+        }
+
+        /* Profile Header */
+        .profile-header {
+            display: flex;
+            align-items: center;
+            gap: 25px;
+            padding-bottom: 25px;
+            border-bottom: 2px solid #eef0f2;
+            margin-bottom: 30px;
+        }
+
+        .avatar {
+            width: 110px;
+            height: 110px;
+            border-radius: 50%;
+            background-color: #0056b3;
+            color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 45px;
+            box-shadow: 0 4px 10px rgba(0, 86, 179, 0.2);
+        }
+
+        .profile-info h1 {
+            font-size: 26px;
+            color: #1e293b;
+            margin-bottom: 8px;
+        }
+
+        .profile-info p {
+            font-size: 14px;
+            color: #64748b;
+            margin-bottom: 6px;
+        }
+
+        .social-links {
+            margin-top: 10px;
+        }
+
+        .social-links a {
+            color: #0056b3;
+            font-size: 20px;
+            margin-right: 15px;
+            transition: color 0.2s;
+        }
+
+        .social-links a:hover {
+            color: #003d80;
+        }
+
+        /* Exercises List */
+        h2.section-title {
+            font-size: 20px;
+            color: #0f172a;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .exercise-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 15px;
+        }
+
+        .exercise-card {
+            background: #f8fafc;
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
+            padding: 16px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .exercise-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+            border-color: #cbd5e1;
+        }
+
+        .exercise-card .info {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .exercise-card .info i {
+            font-size: 18px;
+            color: #0056b3;
+            width: 25px;
+            text-align: center;
+        }
+
+        .exercise-card .btn-link {
+            text-decoration: none;
+            background-color: #0056b3;
+            color: #fff;
+            padding: 6px 14px;
+            border-radius: 6px;
+            font-size: 13px;
+            font-weight: 600;
+            transition: background 0.2s;
+        }
+
+        .exercise-card .btn-link:hover {
+            background-color: #003d80;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 30px;
+            font-size: 13px;
+            color: #94a3b8;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <!-- Thẻ thông tin cá nhân -->
+        <div class="profile-header">
+            <div class="avatar">
+                <i class="fas fa-user-graduate"></i>
+            </div>
+            <div class="profile-info">
+                <h1>Nguyễn Thanh Hà</h1>
+                <p><i class="fas fa-university fa-fw"></i> Đại học Kinh tế TP. Hồ Chí Minh (UEH)</p>
+                <p><i class="fas fa-book fa-fw"></i> Môn: Phát triển ứng dụng TMĐT</p>
+                <p><i class="fas fa-user-tie fa-fw"></i> Giảng viên: TS. Nguyễn Mạnh Tuấn</p>
+
+                <!-- Social Links -->
+                <div class="social-links">
+                    <a href="https://github.com/hanguyen31241027418-tech" target="_blank" title="GitHub Profile"><i
+                            class="fab fa-github"></i></a>
+                    <a href="mailto:ha.nguyen@ueh.edu.vn" title="Email me"><i class="fas fa-envelope"></i></a>
+                    <a href="https://bit.ueh.edu.vn" target="_blank" title="Khoa CNTTKD"><i
+                            class="fas fa-globe"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Danh sách các Bài tập Tuần 3 -->
+        <h2 class="section-title"><i class="fas fa-tasks"></i> Danh Sách Bài Tập Tuần 3 - CSS Basic</h2>
+
+        <div class="exercise-grid">
+            <div class="exercise-card">
+                <div class="info">
+                    <i class="fas fa-gamepad"></i>
+                    <span><strong>Bài tập 1:</strong> Minh chứng CSS Games</span>
+                </div>
+                <a href="./BaiTap1/BaiTap1.html" class="btn-link">Xem bài <i class="fas fa-arrow-right"></i></a>
+            </div>
+
+            <div class="exercise-card">
+                <div class="info">
+                    <i class="fas fa-font"></i>
+                    <span><strong>Bài tập 2:</strong> Định dạng CSS Text & BG</span>
+                </div>
+                <a href="./BaiTap2/BaiTap2.html" class="btn-link">Xem bài <i class="fas fa-arrow-right"></i></a>
+            </div>
+
+            <div class="exercise-card">
+                <div class="info">
+                    <i class="fas fa-bars"></i>
+                    <span><strong>Bài tập 4:</strong> Horizontal Menu (Inline-block)</span>
+                </div>
+                <a href="./BaiTap4.html" class="btn-link">Xem bài <i class="fas fa-arrow-right"></i></a>
+            </div>
+
+            <div class="exercise-card">
+                <div class="info">
+                    <i class="fas fa-server"></i>
+                    <span><strong>Bài tập 5:</strong> Best Shared Hosting Page</span>
+                </div>
+                <a href="./BaiTap5.html" class="btn-link">Xem bài <i class="fas fa-arrow-right"></i></a>
+            </div>
+
+            <div class="exercise-card">
+                <div class="info">
+                    <i class="fas fa-th-large"></i>
+                    <span><strong>Bài tập 6:</strong> Portfolio 3-Column Grid</span>
+                </div>
+                <a href="./BaiTap6.html" class="btn-link">Xem bài <i class="fas fa-arrow-right"></i></a>
+            </div>
+
+            <div class="exercise-card">
+                <div class="info">
+                    <i class="fas fa-columns"></i>
+                    <span><strong>Bài tập 7:</strong> Layout (Nav + Main + Footer)</span>
+                </div>
+                <a href="./BaiTap7.html" class="btn-link">Xem bài <i class="fas fa-arrow-right"></i></a>
+            </div>
+
+            <div class="exercise-card" style="grid-column: 1 / -1;">
+                <div class="info">
+                    <i class="fas fa-shield-alt"></i>
+                    <span><strong>Bài tập 8a:</strong> Heroes of JavaScript and HTML</span>
+                </div>
+                <a href="./BaiTap8/BaiTap8.html" class="btn-link">Xem bài <i class="fas fa-arrow-right"></i></a>
+            </div>
+        </div>
+
+        <footer>
+            <p>&copy; 2026 Nguyễn Thanh Hà - BIT UEH</p>
+        </footer>
+    </div>
+
+</body>
+
+</html>
