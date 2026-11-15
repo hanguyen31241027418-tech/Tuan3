@@ -7,7 +7,8 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/theme.css">    
     
-    <script type="text/javascript" language="javascript" src="js/travel-data.js"></script>    
+<script type="text/javascript" src="js/travel-data.js"></script>
+<script type="text/javascript" src="js/exercise.js"></script>
 </head>
 <body>
     
@@ -21,27 +22,16 @@
            <div class="panel-heading">Continents</div>
            <!-- replace list with function call -->
            <ul class="list-group">     
-              <li class="list-group-item"><a href="#">Asia</a></li>
-              <li class="list-group-item"><a href="#">Africa</a></li>
-              <li class="list-group-item"><a href="#">Europe</a></li>
-              <li class="list-group-item"><a href="#">North America</a></li>
-              <li class="list-group-item"><a href="#">South America</a></li>    
+                <script>generateContinents();</script>
+
            </ul>
          </div>  <!-- end continents panel -->  
          <div class="panel panel-info">
            <div class="panel-heading">Popular Countries</div>
            <!-- replace list with function call --> 
            <ul class="list-group">                                        
-              <li class="list-group-item"><a href="#">Bahamas</a></li>
-              <li class="list-group-item active">Canada</li>
-              <li class="list-group-item"><a href="#">Germany</a></li>
-              <li class="list-group-item"><a href="#">Ghana</a></li>
-              <li class="list-group-item"><a href="#">Greece</a></li>
-              <li class="list-group-item"><a href="#">Hungary</a></li>
-              <li class="list-group-item"><a href="#">Italy</a></li>
-              <li class="list-group-item"><a href="#">Spain</a></li>
-              <li class="list-group-item"><a href="#">United Kingdom</a></li>
-              <li class="list-group-item"><a href="#">United States</a></li>    
+                <script>generateCountries();</script>
+ 
            </ul>
          </div>  <!-- end countries panel -->       
       </div>  <!-- end left navigation rail --> 
@@ -63,21 +53,8 @@
          <div class="postlist">
          
            <!-- replace each of these three rows with a function call -->
-           <div class="row">
-               <div class="col-md-2"> 
-                  <a href="post.php?id=1" class=""><img src="images/travel/6592294487.jpg" alt="Calgary in the Snow" class="img-thumbnail"/></a>
-               </div>
-               <div class="col-md-10"> 
-                  <h2>Calgary in the Snow</h2>
-                  <div class="details">
-                    Posted by Leonie Kohler>
-                    <span class="pull-right">12/4/2011</span>
-                  </div>
-                  <p class="excerpt">
-                  In December of 2011, I was lucky/unfortunate enough to have the opportunity to fly to chilly Calgary in Western Canada for a week-long conference. 
-                  </p>
-                  <p><a href="post.php?id=1" class="btn btn-primary btn-sm">Read more</a></p>
-               </div>
+                <script>generatePosts();</script>
+
            </div>
            <hr/>
            
@@ -118,19 +95,7 @@
          </div>
         
       <!-- replace pagination with function call -->
-      <ul class="pagination">
-        <li><a href="#">&laquo;</a></li>
-        <li><a href="#">1</a></li>
-        <li><a href="#">2</a></li>
-        <li><a href="#">3</a></li>
-        <li class="active"><a href="#">4</a></li>
-        <li><a href="#">5</a></li>
-        <li><a href="#">6</a></li>
-        <li><a href="#">7</a></li>
-        <li><a href="#">8</a></li>
-        <li><a href="#">9</a></li>
-        <li><a href="#">&raquo;</a></li>
-      </ul>
+      <script>generatePagination(9, 4);</script>
       
       </div>  <!-- end main content column -->
    </div>  <!-- end main content row -->
